@@ -16,18 +16,20 @@ print(add_everything_up(123.456, 7))
 яблоко4215
 130.456
 '''
+
+
 def add_everything_up(a, b):
     ''''''
     '''add_everything_up, будет складывать числа(int, float) и строки(str)'''
     __q_ty_error = 0
-    #число допущенных ошибок
+    # число допущенных ошибок
     try:
         '''проверка блока кода на ошибки.'''
         everything = a + b
     except (TypeError) as exc:
         '''обработка ошибки в блоке. Если a или b не является числом, возвращать
         данные как строковое представление вместе'''
-        __q_ty_error+=1
+        __q_ty_error += 1
         print(F'Необходимо проверить тип данных {TypeError}  {exc}')
         everything = str(a) + str(b)
 
@@ -38,13 +40,13 @@ def add_everything_up(a, b):
 
     finally:
         '''Действие завершения при любом результате'''
-        if __q_ty_error==0:
-           print(f'Обработка данных завершена.Ошибок нет')
+        if __q_ty_error == 0:
+            print(f'Обработка данных завершена.Ошибок нет')
         else:
-            #print(int(str(a)[-1]) == 3)
-            if int(str(__q_ty_error)[-1])==0  or 9>=int(str(__q_ty_error)[-1]) >=5 :
-                 strok='ошибок'
-            elif int(str(__q_ty_error)[-1])==1:
+            # print(int(str(a)[-1]) == 3)
+            if int(str(__q_ty_error)[-1]) == 0 or 9 >= int(str(__q_ty_error)[-1]) >= 5:
+                strok = 'ошибок'
+            elif int(str(__q_ty_error)[-1]) == 1:
                 strok = 'ошибка'
             else:
                 strok = 'ошибки'
@@ -52,7 +54,7 @@ def add_everything_up(a, b):
     return everything
 
 
-print(f'{"*"*3} Вывод результата {"*"*15}\n' )
+print(f'{"*" * 3} Вывод результата {"*" * 15}\n')
 print(add_everything_up(123.456, 'строка'))
 print()
 print(add_everything_up('яблоко', 4215))
