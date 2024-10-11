@@ -82,7 +82,7 @@ def calculate_average(numbers):
         # деление на 0, тип данных
         itog = personal_sum(numbers)[0]
         # выбор перврого значения (result, incorrect_data)
-        count_int = personal_sum(numbers)[1]
+        count_int = len(numbers)-personal_sum(numbers)[1]
         # выбор второго значения (result, incorrect_data)
         average = itog / count_int
         # среднее значение чисел
